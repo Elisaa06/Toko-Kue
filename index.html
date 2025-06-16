@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cake Castle</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">cake<span>castle</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- Search Form -->
+      <div class="search-wrapper">
+        <form id="search-form">
+          <input type="text" id="search-input" placeholder="Cari kue..." />
+          <button type="submit">
+            <i data-feather="search"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Shopping Cart -->
+      <div class="shopping-cart-container">
+        <div class="cart-header">
+          <h2>Keranjang Belanja</h2>
+          <button class="close-cart" id="close-cart">
+            <i data-feather="x"></i>
+          </button>
+        </div>
+        <div class="cart-items">
+          <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+          <div class="total">
+            <span>Total: </span>
+            <span id="cart-total">IDR 0</span>
+          </div>
+          <button class="checkout-btn">Checkout</button>
+          <button class="clear-cart-btn">Kosongkan Keranjang</button>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Hero Section start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Nikmati Rasa Istimewa<span> Kue</span></h1>
+        <p>
+          Kue penuh rasa dan cinta, membuat setiap momen lebih manis dan tak
+          terlupakan!
+        </p>
+        <a href="#menu" class="cta">Beli Sekarang</a>
+      </main>
+    </section>
+    <!-- Hero Section end -->
+
+    <!-- About Section start -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="img/header-bg.jpeg.jpg" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h3>Selamat datang di Cake Castle!</h3>
+          <p>
+            Kami adalah toko kue yang berkomitmen untuk memberikan pengalaman
+            manis dan tak terlupakan bagi setiap pelanggan. Setiap kue yang kami
+            buat dipersembahkan dengan penuh cinta dan tak terlupakan.
+          </p>
+
+          <p>
+            Di Cake Castle, kami percaya bahwa setiap momen istimewa layak
+            dirayakan dengan kue yang lezat. Kami hadir untuk menyempurnakan
+            setiap acara Anda. Kami juga menerima pesanan kue sesuai dengan
+            pesanan khusus dengan desain dan rasa yang sesuai dengan keinginan
+            Anda.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- About Section end -->
+
+    <!-- Menu Section start -->
+    <section id="menu" class="menu">
+      <h2><span>Menu</span> Kami</h2>
+
+      <div class="row" id="menu-container">
+        <div class="menu-card" data-name="Ice Cream Cake" data-price="90000">
+          <img
+            src="img/ice cream cake.jpg"
+            alt="Ice Cream Cake"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Ice Cream Cake -</h3>
+          <p class="menu-card-price">IDR 90K</p>
+          <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card" data-name="Black Forest" data-price="95000">
+          <img
+            src="img/black forest.jpg"
+            alt="Black Forest"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Black Forest -</h3>
+          <p class="menu-card-price">IDR 95K</p>
+          <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card" data-name="Blue Cake" data-price="85000">
+          <img src="img/blue cake.jpg" alt="Blue Cake" class="menu-card-img" />
+          <h3 class="menu-card-title">- Blue Cake -</h3>
+          <p class="menu-card-price">IDR 85K</p>
+          <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card" data-name="Chocolate Cake" data-price="90000">
+          <img
+            src="img/chocolate.jpg"
+            alt="Chocolate Cake"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Chocolate Cake -</h3>
+          <p class="menu-card-price">IDR 90K</p>
+          <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card" data-name="Pink Cake" data-price="80000">
+          <img src="img/pink cake.jpg" alt="Pink Cake" class="menu-card-img" />
+          <h3 class="menu-card-title">- Pink Cake -</h3>
+          <p class="menu-card-price">IDR 80K</p>
+          <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card" data-name="Vanilla Cake" data-price="100000">
+          <img
+            src="img/vanilla cake with oreo.jpg"
+            alt="Vanilla Cake"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Vanilla Cake -</h3>
+          <p class="menu-card-price">IDR 100K</p>
+          <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card" data-name="Brown Cake" data-price="75000">
+          <img
+            src="img/brown cake.jpg"
+            alt="Brown Cake"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Brown Cake -</h3>
+          <p class="menu-card-price">IDR 75K</p>
+          <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card" data-name="Strawberry Cake" data-price="95000">
+          <img
+            src="img/strawberry cake with cherry.jpg"
+            alt="strawberry Cake"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Strawberry Cake -</h3>
+          <p class="menu-card-price">IDR 95K</p>
+          <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card" data-name="White Cake" data-price="80000">
+          <img
+            src="img/white cake.jpg"
+            alt="White Cake"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- White Cake -</h3>
+          <p class="menu-card-price">IDR 80K</p>
+          <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-card" data-name="Wedding Cake" data-price="350000">
+          <img
+            src="img/wedding cake.jpg"
+            alt="Wedding Cake"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">- Wedding Cake -</h3>
+          <p class="menu-card-price">IDR 350K</p>
+          <button class="add-to-cart-btn">Tambah ke Keranjang</button>
+        </div>
+      </div>
+    </section>
+    <!-- Menu Section end -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact">
+      <h2><span>Kontak</span> Kami</h2>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253822.05981065455!2d107.10694245000002!3d-6.267717400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698671b82e87bf%3A0xe7318771148e5f8a!2sKab.%20Bekasi%2C%20Kec.%20Tambelang%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1743172972945!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
+        <form id="contact-form" action="">
+  <div class="input-group">
+    <i data-feather="user"></i>
+    <input type="text" placeholder="nama" />
+  </div>
+  <div class="input-group">
+    <i data-feather="mail"></i>
+    <input type="text" placeholder="email" />
+  </div>
+  <div class="input-group">
+    <i data-feather="phone"></i>
+    <input type="text" placeholder="no hp" />
+  </div>
+  <button type="submit" class="btn">kirim pesan</button>
+</form>
+
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="social">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">Kelompok 4</a>. | &copy; 2025.</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Notification Toast -->
+    <div class="notification-toast" id="notification-toast">
+      <div class="notification-content">
+        <i data-feather="check-circle"></i>
+        <span id="notification-message">Item ditambahkan ke keranjang!</span>
+      </div>
+      <title>Keranjang Belanja | Cake Castle</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .cart-page {
+        padding: 8rem 7%;
+        color: #fff;
+      }
+
+      .cart-page h2 {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+      }
+
+      .cart-items {
+        background-color: #222;
+        border-radius: 10px;
+        padding: 2rem;
+      }
+
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #444;
+        padding: 1rem 0;
+      }
+
+      .cart-item:last-child {
+        border-bottom: none;
+      }
+
+      .cart-item-name {
+        font-size: 1.4rem;
+      }
+
+      .cart-item-price {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+
+      .checkout-btn {
+        margin-top: 2rem;
+        background-color: #dcc337;
+        color: #000;
+        padding: 1rem 2rem;
+        font-size: 1.3rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .checkout-btn:hover {
+        background-color: #fee971;
+      }
+    </style>
+      
+      
+    </script>
+  </body>
+</html>
+
+    </div>
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+  </body>
+</html>
